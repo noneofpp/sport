@@ -1,0 +1,450 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    text-decoration: none;
+}
+
+textarea:focus, input:focus {
+    outline: none;
+}
+
+.main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 16px;
+    background-color: #E5C9D7; /* Màu nền nhạt hồng tím */
+}
+
+.title {
+    text-align: center;
+    padding: 2.2em 0 0.5em 0;
+    color: #26415E; /* Màu tiêu đề đậm xanh dương */
+}
+
+.alert {
+    background-color: #C48CB3; /* Màu hồng tím đậm cho banner thông báo */
+    color: #fff;
+}
+
+.alert .info {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 11px 16px;
+}
+
+.alert .info a {
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.alert .info a i {
+    padding: 0 8px;
+    color: #fff;
+}
+
+.alert .info p {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 17px 16px;
+    width: 100%;
+    background-color: #0B1B32; /* Màu nền nav đậm xanh navy */
+    color: #fff;
+}
+
+.nav-left {
+    display: flex;
+    cursor: pointer;
+    width: 50%;
+}
+
+.nav-left img {
+    margin-right: 26px;
+}
+
+.nav-left ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    font-size: 14px;
+    font-weight: 700;
+    color: #E5C9D7; /* Màu chữ nhạt hồng tím cho nav */
+}
+
+.nav-left ul li {
+    padding: 0 16px;
+}
+
+.nav-left ul li:hover {
+    color: #83A6CE; /* Màu xanh dương nhạt khi hover */
+    transition: 0.5s;
+}
+
+.nav-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 50%;
+}
+
+.nav-right input {
+    border: none;
+    border-radius: 24px;
+    background-color: #E5C9D7; /* Màu nền nhạt hồng tím cho input search */
+    padding: 15px 30px;
+    color: #26415E; /* Màu chữ đậm xanh dương */
+    font-weight: 500;
+    width: 280px;
+}
+
+.nav-right input[type="text"] {
+    font-size: 14px;
+}
+
+.nav-right .fa-user {
+    margin: 0 0 0 32px;
+    cursor: pointer;
+    font-size: 26px;
+    color: #fff; /* Màu icon người dùng */
+}
+
+.fa-magnifying-glass {
+    background-color: #83A6CE; /* Màu xanh dương nhạt cho nút search */
+    border-radius: 24px;
+    color: #fff;
+    padding: 16px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.slide img {
+    width: 100%;
+    margin: 2.2em 0 0 0;
+    border-radius: 8px; /* Thêm bo góc cho banner giống Apple Music */
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px; /* Khoảng cách giữa các thẻ */
+    width: 100%;
+    margin: 16px 0;
+    padding: 20px;
+    background-color: #fff; /* Màu nền trắng cho khu vực thẻ */
+    border-radius: 12px; /* Bo góc khu vực thẻ */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bóng mờ nhẹ */
+}
+
+.categories .card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 12px;
+    transition: transform 0.5s;
+    cursor: pointer;
+    background-color: #fff; /* Màu nền trắng cho thẻ */
+}
+
+.categories .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Bóng mờ khi hover */
+}
+
+.categories .card img {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    max-width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.categories .card h5 {
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    background-color: #E5C9D7; /* Màu nhạt hồng tím cho tiêu đề thẻ */
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 600;
+    color: #26415E; /* Màu chữ đậm xanh dương */
+    margin: 0;
+    padding: 15px;
+}
+
+.best-sellers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.best-sellers .item {
+    width: 100%;
+    background-color: #fff;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 15px;
+}
+
+.best-sellers .item .shape-item {
+    padding: 16px;
+}
+
+.best-sellers .item .shape-item img {
+    width: 100%;
+    padding: 20px 15px 15px;
+}
+
+.best-sellers .item .shape-item h2 {
+    color: #26415E;
+    height: 30px;
+    overflow: hidden;
+    line-height: initial;
+    font-size: 21px;
+    font-weight: 400;
+    margin-bottom: 18px;
+}
+
+.best-sellers .item .shape-item .nav-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.best-sellers .item .shape-item .nav-item span {
+    font-size: 24px;
+    font-weight: bold;
+    color: #C48CB3; /* Màu hồng tím đậm cho giá trị */
+}
+
+.best-sellers .item .shape-item .nav-item i {
+    font-size: 32px;
+    color: #83A6CE; /* Màu xanh dương nhạt cho icon */
+    cursor: pointer;
+}
+
+.favorite-brands {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;    
+}
+
+.follow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.follow p {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 0 0 0 6px;
+    color: #26415E; /* Màu chữ đậm xanh dương */
+}
+
+.follow p a {
+    color: #83A6CE; /* Màu xanh dương nhạt cho link */
+}
+
+.inside-view {
+    display: flex;
+    flex-direction: column;
+}
+
+.inside-view .ads {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em 0;
+}
+
+.footer img {
+    margin-bottom: -4px;
+}
+
+.footer {
+    background-color: #0B1B32; /* Màu nền đậm xanh navy cho footer */
+    color: #fff;
+}
+
+.footer .nav-footer {
+    background-color: #0B1B32; /* Giữ màu nền footer */
+    text-align: left;
+}
+
+.footer .nav-footer table {
+    padding: 80px 0;
+    margin: 0 auto;
+    color: #E5C9D7; /* Màu chữ nhạt hồng tím cho footer */
+}
+
+.footer .nav-footer table tr th {
+    margin: 0 30px 13px 30px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff; /* Màu tiêu đề footer trắng */
+    width: 27%;
+}
+
+.footer .nav-footer table tr td {
+    width: 27%;
+    margin: 0 30px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 40px;
+    height: 56px;
+    color: #E5C9D7; /* Màu chữ nhạt hồng tím */
+    cursor: pointer;
+}
+
+.footer .nav-footer table tr td:hover {
+    color: #83A6CE; /* Màu xanh dương nhạt khi hover */
+}
+
+.footer .nav-footer table tr td .social {
+    display: flex;
+    align-items: center;
+}
+
+.footer .nav-footer table tr td .social i {
+    padding-right: 10px;
+    font-size: 23px;
+    color: #fff; /* Màu icon mạng xã hội */
+} 
+
+.footer .nav-footer table tr td input {
+    width: 100%;
+    border-radius: 56px;
+    height: 56px;
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    color: #26415E; /* Màu chữ đậm xanh dương cho input */
+    background-color: #E5C9D7; /* Màu nền nhạt hồng tím cho input */
+    margin-bottom: 12px;
+}
+
+.footer .nav-footer table tr td button {
+    background: #C48CB3; /* Màu hồng tím đậm cho nút đăng ký */
+    color: #fff;
+    font-weight: 800;
+    text-transform: uppercase;
+    width: 100%;
+    height: 56px;
+    border-radius: 56px;
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.footer .nav-footer table tr td button:hover {
+    background: #83A6CE; /* Màu xanh dương nhạt khi hover */
+}
+
+.copyright {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 16px 0 6.5em 0;
+    color: #E5C9D7; /* Màu chữ nhạt hồng tím cho copyright */
+}
+
+a {
+    text-decoration: none;
+    text-transform: none;
+    color: #83A6CE; /* Màu xanh dương nhạt cho link */
+}
+
+a:visited {
+    color: #26415E; /* Màu đậm xanh dương khi đã truy cập */
+}
+ 
+.support-page .slide-second {
+    padding: 10rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5rem;
+    background-color: #E5C9D7; /* Màu nền nhạt hồng tím cho trang hỗ trợ */
+    flex-wrap: wrap;
+}
+
+.support-page .slide-second .left {
+    width: 40%;
+}
+
+.support-page .slide-second .left h2 {
+    font-size: 2.5rem;
+    color: #26415E; /* Màu tiêu đề đậm xanh dương */
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.support-page .slide-second .info-help {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border: 1px solid #C48CB3; /* Màu viền hồng tím đậm */
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+    background-color: #fff; /* Màu nền trắng cho input */
+    color: #26415E; /* Màu chữ đậm xanh dương */
+}
+
+.support-page .slide-second .button {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background-color: #83A6CE; /* Màu xanh dương nhạt cho nút */
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background 0.3s;
+}
+
+.support-page .slide-second .button:hover {
+    background-color: #C48CB3; /* Màu hồng tím đậm khi hover */
+}
+
+.support-page .slide-second .right {
+    width: 50%;
+}
+
+.support-page .slide-second .right img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1rem;
+}
+
+@media only screen and (max-width: 1500px) {
+    .best-sellers {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .best-sellers .item {
+       width: 60%;
+    }
+}
